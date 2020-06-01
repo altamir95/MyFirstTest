@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MyFirstTest.Models.Customers>
+    <h1 >Все клиенты</h1>
+    <table class="table table-dark ">
+        <tr >
+            <td>Наименование</td>
+            <td>ИНН</td>
+            <td>Тип</td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var customers in Model)
+        {
+    <tr>
+        <td>@customers.CustomerName</td>
+        <td>@customers.ITN</td>
+        <td>@customers.AType</td>
+        <td><a href="~/Home/RemoveCustomers/@customers.Id">Удалить</a></td>
+        <td><a href="~/Home/UpdateCustomers/@customers.Id">Изменить</a></td>
+
+    </tr>
+        }
+    </table>

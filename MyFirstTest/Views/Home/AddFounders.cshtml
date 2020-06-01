@@ -1,0 +1,21 @@
+﻿<form method="post">
+    <!-- Учредитель -->
+    <h1>Теперь заполните бланк с иформацией о учредителе</h1>
+    <input type="hidden" value="@ViewBag.CustomerId" name="CustomerId" />
+    <!-- ИНН -->
+    <div class="form-group">
+        <label for="exampleInputITN">ИНН</label>
+        <input required type="number" class="form-control" name="ITN" id="exampleInputITN" pattern="\d{10}">
+    </div>
+    <!-- Имя -->
+    <div class="form-group">
+        <label for="exampleInputFirstName">Имя</label>
+        <input required type="text" class="form-control" name="FirstName" id="exampleInputFirstName">
+    </div>
+    <!-- Фамилия -->
+    <div class="form-group">
+        <label for="exampleInputLastName">Фамилия</label>
+        <input required type="text" class="form-control" name="LastName" id="exampleInputLastName">
+    </div>
+    <button type="submit" class="btn btn-primary">Ввести</button>
+</form>
