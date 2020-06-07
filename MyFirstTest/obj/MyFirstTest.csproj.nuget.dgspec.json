@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj": {}
+    "C:\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj": {
+    "C:\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
+        "projectUniqueName": "C:\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
         "projectName": "MyFirstTest",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
+        "projectPath": "C:\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\obj\\",
+        "outputPath": "C:\\MyFirstTest\\MyFirstTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",

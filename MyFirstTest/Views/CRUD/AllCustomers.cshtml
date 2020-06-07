@@ -1,0 +1,75 @@
+﻿
+@model MyFirstTest.Models.SomeModel
+<h1>Все клиенты</h1>
+<h1 class="text-danger" role="alert">@Model.errorCarrier</h1>
+
+
+<table class="table table-dark ">
+    <tr>
+        <td>Наименование</td>
+        <td>ИНН</td>
+        <td>Тип лица</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var customer in Model.Customers)
+    {
+<tr>
+    <td>
+        <form method="post" id="@customer.Id"></form>
+        <input type="hidden" value="@customer.CreationData" name="CreationData" form="@customer.Id" />
+        <input type="hidden" value="@customer.Id" name="Id" form="@customer.Id" />
+        <input type="hidden" value="@customer.CustomerITN" name="OldITN" form="@customer.Id" />
+        <input type="hidden" value="@customer.EntityType" name="OldEntityType" form="@customer.Id" />
+        <input required type="text" value="@customer.CustomerName" class="form-control" name="CustomerName" form="@customer.Id">
+    </td>
+    <td>
+        <input required type="text" value="@customer.CustomerITN" class="form-control" name="CustomerITN" form="@customer.Id">
+    </td>
+
+    <td>
+        <select class="form-control" id="EntityType" name="EntityType" form="@customer.Id">
+            @{if (customer.EntityType == "юридическое лицо")
+                {
+                    <option value="юридическое лицо" selected>юридическое лицо</option>
+
+                    <option value="индивидуальный предприниматель">индивидуальный предприниматель</option>
+                }
+                else
+                {
+                    <option value="юридическое лицо" selected>индивидуальный предприниматель</option>
+
+                    <option value="индивидуальный предприниматель">юридическое лицо</option>
+                }
+            }
+        </select>
+    </td>
+    @if (customer.EntityType == "юридическое лицо")
+    {
+        <td>
+            <select class="form-control" id="select">
+                @foreach (var founder in Model.Founders)
+                {
+                    if (customer.Id == founder.CustomerId)
+                    {
+                        <option>@founder.FirstName @founder.LastName</option>
+                    }
+
+                }
+            </select>
+        </td>
+        <td><a class="btn btn-success" href="~/CRUD/AddFounders/@customer.Id" role="button">+</a></td>
+    }
+    else
+    {
+        <td></td>
+        <td></td>
+    }
+
+    <td><button type="submit" class="btn btn-primary" form="@customer.Id">Изменить</button></td>
+    <td><a class="btn btn-primary" href="~/CRUD/RemoveCustomers/@customer.Id">Удалить</a></td>
+</tr>
+    }
+</table>

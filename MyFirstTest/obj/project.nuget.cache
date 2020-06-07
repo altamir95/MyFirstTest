@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RE5SDWipjJpyJoorkFC6KEa8aOcXqM8OjqWYhYRChZUE2xkrZUDYGD7VHFmvKuSmTozpDRdTCd9XGSl6K8NKlA==",
+  "dgSpecHash": "97UbXWzVu6SOYYNDgsR8HkNwsrg5A3CtQfk4sZpuYAJYdV6hu3XWEEQuwISbLBm1eYaPPJupkWnW8u6uu828fQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Администратор\\source\\repos\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
+  "projectFilePath": "C:\\MyFirstTest\\MyFirstTest\\MyFirstTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

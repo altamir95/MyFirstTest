@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MyFirstTest.Models.Founder>
+<h1>Все учредители</h1>
+        <h1 class="text-danger" role="alert">@ViewBag.error</h1>
+        <table class="table table-dark ">
+            <tr>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>ИНН</td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (var founders in Model)
+            {
+                <tr>
+                    <td>
+                        <form method="post" id="@founders.FounderId"></form>
+                        <input type="hidden" value="@founders.CreationData" name="CreationData" form="@founders.FounderId" />
+                        <input type="hidden" value="@founders.CustomerId" name="CustomerId" form="@founders.FounderId" />
+                        <input type="hidden" value="@founders.FounderId" name="FounderId" form="@founders.FounderId" />
+                        <input type="hidden" value="@founders.FounderITN" name="OldITN" form="@founders.FounderId" />
+                        <input required type="text" value="@founders.FirstName" class="form-control" name="FirstName" form="@founders.FounderId">
+                    </td>
+                    <td>
+                        <input required type="text" value="@founders.LastName" class="form-control" name="LastName" form="@founders.FounderId">
+                    </td>
+
+                    <td>
+                        <input required type="text" value="@founders.FounderITN" class="form-control" name="FounderITN" form="@founders.FounderId">
+                    </td>
+                    <td><button type="submit" class="btn btn-primary" form="@founders.FounderId">Изменить</button></td>
+                    <td><a class="btn btn-primary" href="~/CRUD/RemoveFounders/@founders.FounderId">Удалить</a></td>
+                </tr>
+
+            }
+        </table>

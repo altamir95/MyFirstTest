@@ -1,0 +1,31 @@
+﻿
+    <form method="post" class="">
+        <!-- Клиент -->
+        <h3>Сначало Заполните бланк с иформацией о клиенте</h3>
+        <h1 class="text-danger" role="alert">@ViewBag.error</h1>
+        <!-- ИНН -->
+        <div class="form-group">
+            <label for="exampleInputITN">ИНН</label>
+            <input required type="text" class="form-control" name="CustomerITN" id="exampleInputITN">
+        </div>
+        <!-- Наиминование -->
+        <div class="form-group">
+            <label for="exampleInputCustomerName">Наименование</label>
+            <input required type="text" class="form-control" name="CustomerName" id="exampleInputCustomerName">
+        </div>
+        <!-- Тип клиента -->
+        <p>Юридическое лицо или индивидуальный предприниматель?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="EntityType" id="exampleRadios1" value="юридическое лицо" checked>
+            <label class="form-check-label" for="exampleRadios1">
+                юридическое лицо
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="EntityType" id="exampleRadios2" value="индивидуальный предприниматель">
+            <label class="form-check-label" for="exampleRadios2">
+                индивидуальный предприниматель
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Далее</button>
+    </form>
